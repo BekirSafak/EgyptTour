@@ -1,0 +1,241 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navText: #dbdbdb;
+    --mainText: #fff;
+}
+
+body {
+    position: relative;
+    background-image: url(/images/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    display: flex;
+    height: 75px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navBox {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+img {
+    width: 50px;
+    align-items: center;
+    text-align: center;
+}
+
+.navBox ul {
+    display: flex;
+    list-style: none;
+}
+
+.navBox ul li {
+    margin: 12px;
+}
+
+.navBox ul li a {
+    text-decoration: none;
+    color: var(--navText);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.navBox ul li a:hover {
+    color: var(--mainText);
+}
+
+.navBox ul li a ion-icon {
+    font-size: 21px;
+    font-weight: bolder;
+
+}
+
+section {
+    display: flex;
+    position: relative;
+    width: 80%;
+    margin: 35px auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftContent {
+    width: 50%;
+}
+
+.leftContent h1 {
+    font-size: 92px;
+    margin-bottom: 18px;
+    color: var(--mainText);
+    text-shadow: -2px 2px 8px #858585;
+}
+
+.leftContent p {
+    font-size: 24px;
+    color: var(--mainText);
+}
+
+.leftContent input {
+    padding: 12px 56px;
+    border: none;
+    outline: none;
+    background-color: #d3cccc;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 25px;
+    margin-top: 42px;
+    cursor: pointer;
+}
+
+.leftContent input:hover {
+    background-color: var(--mainText);
+}
+
+.imgsBox:nth-child(1) {
+    background-image: url(/images/pic-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.imgsBox:nth-child(2) {
+    background-image: url(/images/pic-2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.imgsBox:nth-child(3) {
+    background-image: url(/images/pic-3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.imgsBox:nth-child(4) {
+    background-image: url(/images/pic-4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.rightContent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rightContent .imgsBox {
+    margin: 12px;
+}
+
+.imgsBox {
+    position: relative;
+    flex: 45%;
+    height: 350px;
+    width: 120px;
+    border-radius: 24px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+
+.imgsBox:hover {
+    position: relative;
+    transform: translateY(-10px);
+}
+
+.imgsBox h2 {
+    position: absolute;
+    top: 70%;
+    font-size: 24px;
+    color: var(--mainText);
+    margin: 8px;
+}
+
+.imgsBox span {
+    position: absolute;
+    top: 80%;
+    font-size: 18px;
+    color: var(--mainText);
+    margin: 8px;
+}
+
+@media only screen and (max-width:1030px) {
+    .imgsBox {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 30%;
+    }
+
+    .imgsBox h2 {
+        top: 65%;
+    }
+
+    .imgsBox span {
+        top: 75%;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    .leftContent {
+        display: none;
+    }
+
+    .rightContent {
+        margin: 0 auto;
+    }
+
+}
+
+@media only screen and (max-width:575px) {
+    .rightContent {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 80vh;
+        width: 100%;
+    }
+
+    .rightContent .imgsBox {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 12px;
+    }
+
+    .imgsBox h2 {
+        top: 60%;
+    }
+}
+
+@media only screen and (max-width:468px) {
+    .imgsBox h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .imgsBox span {
+        display: none;
+    }
+}
